@@ -1,0 +1,28 @@
+Assuming that you are using Ubuntu 10.04. Download the package:
+
+mkdir /tmp/dpkg
+cd /tmp/dpkg
+
+for 32bit:
+
+wget http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.15.5.6ubuntu4_i386.deb
+
+for 64bit:
+
+wget http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.15.5.6ubuntu4_amd64.deb
+
+Extract the archive:
+
+ar x dpkg*.deb data.tar.gz
+tar xfvz data.tar.gz ./usr/bin/dpkg
+
+Copy the binary to /usr/bin:
+
+
+sudo cp ./usr/bin/dpkg /usr/bin/
+
+Now try to reinstall dpkg:
+
+
+sudo apt-get update
+sudo apt-get install --reinstall dpkg

@@ -1,0 +1,8 @@
+/opt/lampp/etc/extra/httpd-xampp.conf
+
+Find phpmyadmin
+
+Add
+Require all granted
+
+after that.

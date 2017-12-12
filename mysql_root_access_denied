@@ -1,0 +1,52 @@
+I recently upgrade my Ubuntu 15.04 to 16.04 and this has worked for me:
+
+1 - First, connect in sudo mysql
+
+sudo mysql -u root
+
+
+2 - Check your accounts present in your db
+
+SELECT User,Host FROM mysql.user;
+
++------------------+-----------+
+| User             | Host      |
++------------------+-----------+
+| admin            | localhost |
+| debian-sys-maint | localhost |
+| magento_user     | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
+
+
+3 - Delete current root@localhost account
+
+mysql> DROP USER 'root'@'localhost';
+Query OK, 0 rows affected (0,00 sec)
+
+
+
+4 - Recreate your user
+
+mysql> CREATE USER 'root'@'%' IDENTIFIED BY '1';
+Query OK, 0 rows affected (0,00 sec)
+update user set authentication_string=password('') where user='root';
+
+
+
+####
+UPDATE mysql.user SET Password=PASSWORD('SoftBD!@#321') WHERE User='root';
+
+
+5 - Give permissions to your user (don't forget to flush privileges)
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+Query OK, 0 rows affected (0,00 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0,01 sec)
+
+
+6 - Exit mysql and try to reconnect without sudo
+
+I hope this will help someone :)
