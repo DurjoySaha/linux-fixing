@@ -1,0 +1,1 @@
+rsync -a --exclude=directory1 --exclude=directory2 --exclude=directory3 directory/to/copy/from directory/to/copy/to
