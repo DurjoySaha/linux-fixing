@@ -1,7 +1,0 @@
-# Launcher open 
-	sudo apt-get install --no-install-recommends gnome-panel
-	gnome-desktop-item-edit ~/Desktop/ --create-new
-
-# if php code look like text 
-	php7 apt-get install libapache2-mod-php7.0 
-	service apache2 restart

@@ -1,0 +1,16 @@
+#Remote host identification problem:
+	ssh-keygen -R 167.99.93.39   [ off flag "-", 167.99.93.39 ip address ]
+
+
+# install nginx
+	sudo apt install nginx
+
+# nginx shortcut
+	nginx -h
+
+#
+
+
+
+
+

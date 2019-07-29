@@ -1,4 +1,0 @@
-git config --global user.email "nayeem@softbdltd.com"
-git config --global user.name "Abul Hasnat Nayeem"
-
-ssh-keygen -t rsa -C "abc@email.com" -b 4096

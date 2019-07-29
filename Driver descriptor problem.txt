@@ -1,3 +1,0 @@
-sudo dd if=/dev/zero of=/dev/sdb bs=2048 count=32
-
-sudo hdparm -r0 /dev/sdb

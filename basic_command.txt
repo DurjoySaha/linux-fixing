@@ -1,0 +1,31 @@
+# Launcher open 
+	sudo apt-get install --no-install-recommends gnome-panel
+	gnome-desktop-item-edit ~/Desktop/ --create-new
+
+# if php code look like text 
+	php7 apt-get install libapache2-mod-php7.0 
+	service apache2 restart
+
+#copy directory to subdirectory
+	cp -r ./* ./test/
+
+#exclude-directory-while-copying
+	rsync -a --exclude=directory1 --exclude=directory2 --exclude=directory3 directory/to/copy/from directory/to/copy/to
+
+#check process running or not in ubuntu:
+	ps aux | grep nginx
+
+#Get your IP address:
+	ifconfig/ipadd
+
+#enable ssh port
+	sudo ufw enable ssh	
+
+#for test nginx server
+	nginx -t
+
+#search install module
+	php7.0 -m
+
+#to search apt module
+	apt search php7.0
