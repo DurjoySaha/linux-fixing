@@ -1,0 +1,1 @@
+ffmpeg -i input.mp4 -ss 00:00:00 -t 02:29:09 -async 1 -c copy output.mp4
